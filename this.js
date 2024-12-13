@@ -15,23 +15,22 @@ async function getData() {
         }
 
         const data = await response.json(); // Parse response as JSON
-        console.log("Data Retrieved:", data); // Log the retrieved data
 
-        // Check if records exist and iterate through them
-        if (data.records && Array.isArray(data.records)) {
+        // Check if results exist and iterate through them
+        if (data.results && Array.isArray(data.results)) {
             const tableBody = document.getElementById("data-table");
-            if (data.records.length > 0) {
-                data.records.forEach(record => {
-                    const fields = record.record.fields;
-
+            console.log("++++++++++++");
+            if (data.results.length > 0) {
+                data.results.forEach(record => {
+                    
                     const row = document.createElement("tr");
                     row.innerHTML = `
-                        <td>${fields.year || "N/A"}</td>
-                        <td>${fields.semester || "N/A"}</td>
-                        <td>${fields.the_programs || "N/A"}</td>
-                        <td>${fields.nationality || "N/A"}</td>
-                        <td>${fields.colleges || "N/A"}</td>
-                        <td>${fields.number_of_students || "N/A"}</td>
+                        <td>${record.year || "N/A"}</td>
+                        <td>${record.semester || "N/A"}</td>
+                        <td>${record.the_programs || "N/A"}</td>
+                        <td>${record.nationality || "N/A"}</td>
+                        <td>${record.colleges || "N/A"}</td>
+                        <td>${record.number_of_students || "N/A"}</td>
                     `;
                     tableBody.appendChild(row);
                 });
