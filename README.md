@@ -1,6 +1,6 @@
 # UOB Student Nationality Data Webpage
 
-**ITCS333 Assignment 1**
+**ITCS333 Assignment 3**
 
 **Done by:**
 - Maryam Isa Alhawi - 202204976  
