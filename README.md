@@ -17,7 +17,7 @@ A web application that fetches and displays student nationality data for UOB. Th
 3. Student Nationalities  
 4. Number of Students  
 
-Built using PHP, HTML, and [Pico CSS](https://picocss.com) for styling.
+Built using JavaScript, PHP, HTML, and [Pico CSS](https://picocss.com) for styling.
 
 ---
 
